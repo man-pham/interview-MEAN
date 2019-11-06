@@ -1,0 +1,67 @@
+.title {
+  
+    font-weight: 700;
+    font-size: 32px;
+   
+}
+
+#rentalList{
+    margin-bottom:40px;
+}
+a:hover{
+    text-decoration: none;
+
+}
+
+.card  img{
+   /* width: 100%;
+    height: 40vh;
+    object-fit: contain;
+
+    object-fit: cover;*/
+    height: 70vh;
+}
+.card-body{
+    padding-left:0;
+}
+.card-subtitle {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+}
+.card-title {
+    font-size: 19px;
+    margin: 3px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.card-block {
+    padding: 20px;
+  }
+.card-text{
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    line-height: 2em;
+    margin-bottom: 0;
+}
+.card-footer {
+    font-size: 12px;
+}
+.card-footer p{
+    display: inline-block;
+      line-height: 40px;
+      margin: 0;
+}
+.card-footer .confirm-message {
+    font-weight: bold;
+    margin-right: 10px
+  }
+  .btn-delete {
+    float: right;
+   
+  }
+  
+ 
+  

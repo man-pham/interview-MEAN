@@ -1,0 +1,36 @@
+<h2 class="title">Quản lý danh sách phim</h2>
+  <div class="row container-fluid">
+    <div class='col-md-4' *ngFor="let movie of movies; let i = index">
+      
+<a id="rentalList" routerLink="/movies/{{movie._id}}/edit">
+	<div class="card bwm-card bg-fade">
+	  <img class="card-img-top img-fluid" src="{{movie.imageUrl}}" alt="" >
+	  <div class="card-block">
+	   
+		<div  class="card-title">{{movie.title}}</div>
+		<p class="card-text">Hãng Sản Xuất: <strong>{{movie.company}}</strong></p>
+      <p class="card-text">Đạo Diễn: <strong>{{movie.director}}</strong></p>
+      <p class="card-text">Ngày phát hành: <strong>{{movie.releaseDate | date:'dd-MM-yyyy'}}</strong></p>
+      <p class="card-text">Ngày bấm máy: <strong>{{movie.startDate | date:'dd-MM-yyyy' }}</strong></p>
+      
+	  </div>
+	  <div class="card-footer text-muted">
+		
+		<button type="button" (click)="rentalDeleteIndex = i"
+			*ngIf="rentalDeleteIndex !== i"
+				 class="btn bg-danger  btn-delete">Delete</button>
+		 <a class="btn btn-warning btn-edit" routerLink="/movies/{{movie._id}}/edit">Edit</a>
+     <div *ngIf="rentalDeleteIndex === i">
+      <p class="confirm-message">Do you confirm delete?</p>
+      <div></div>
+      <button (click)="deleteRental(rental._id)"
+               class="btn btn-success btn-delete">Yes</button>
+      <button (click)="rentalDeleteIndex = undefined"
+               class="btn btn-danger btn-edit">No</button>
+    </div>
+	 </div>
+	</div>
+</a>
+
+    </div>
+  </div>
