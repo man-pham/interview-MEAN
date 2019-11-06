@@ -2,10 +2,10 @@
   <div class="row container-fluid">
     <div class='col-md-4' *ngFor="let movie of movies; let i = index">
       
-<a id="rentalList" routerLink="/movies/{{movie._id}}/edit">
+<a id="rentalList" >
 	<div class="card bwm-card bg-fade">
-	  <img class="card-img-top img-fluid" src="{{movie.imageUrl}}" alt="" >
-	  <div class="card-block">
+	  <img class="card-img-top img-fluid" src="{{movie.imageUrl}}" alt=""  routerLink="/movies/{{movie._id}}/edit">
+	  <div class="card-block" >
 	   
 		<div  class="card-title">{{movie.title}}</div>
 		<p class="card-text">Hãng Sản Xuất: <strong>{{movie.company}}</strong></p>

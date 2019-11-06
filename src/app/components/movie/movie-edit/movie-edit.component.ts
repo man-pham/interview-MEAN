@@ -35,11 +35,12 @@ export class MovieEditComponent implements OnInit {
     this.movieService.updateMovie(movieId, movieData).subscribe(
       (updatedMovie: Movie) => {
         console.log(updatedMovie)
-        this.router.navigate([`/movies`]);
+        
         this.movie = updatedMovie;
 
         
       })
+      this.router.navigate([`/movies`]);
      
   }
   getMovie(movieId: string) {
