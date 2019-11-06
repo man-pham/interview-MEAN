@@ -16,16 +16,16 @@
 	  </div>
 	  <div class="card-footer text-muted">
 		
-		<button type="button" (click)="rentalDeleteIndex = i"
-			*ngIf="rentalDeleteIndex !== i"
+		<button type="button" (click)="movieDeleteIndex = i"
+			*ngIf="movieDeleteIndex !== i"
 				 class="btn bg-danger  btn-delete">Delete</button>
 		 <a class="btn btn-warning btn-edit" routerLink="/movies/{{movie._id}}/edit">Edit</a>
-     <div *ngIf="rentalDeleteIndex === i">
+     <div *ngIf="movieDeleteIndex === i">
       <p class="confirm-message">Do you confirm delete?</p>
       <div></div>
-      <button (click)="deleteRental(rental._id)"
+      <button (click)="deleteMovie(movie._id)"
                class="btn btn-success btn-delete">Yes</button>
-      <button (click)="rentalDeleteIndex = undefined"
+      <button (click)="movieDeleteIndex = undefined"
                class="btn btn-danger btn-edit">No</button>
     </div>
 	 </div>

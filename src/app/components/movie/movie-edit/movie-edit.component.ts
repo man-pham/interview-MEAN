@@ -37,10 +37,10 @@ export class MovieEditComponent implements OnInit {
         console.log(updatedMovie)
         
         this.movie = updatedMovie;
-
+        this.router.navigate([`/movies`]);
         
       })
-      this.router.navigate([`/movies`]);
+      
      
   }
   getMovie(movieId: string) {

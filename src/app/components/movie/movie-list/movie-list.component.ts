@@ -26,7 +26,7 @@ export class MovieListComponent implements OnInit {
     	() => {
     	});
   }
-  deleteRental(movieId: string) {
+  deleteMovie(movieId: string) {
     this.movieService.deleteMovie(movieId).subscribe(
       () => {
         this.movies.splice(this.movieDeleteIndex, 1);
